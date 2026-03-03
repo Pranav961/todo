@@ -1,0 +1,1 @@
+{"flutter":{"platforms":{"android":{"default":{"projectId":"todo-edbed","appId":"1:947972033982:android:5c6b842cc02121549d7def","fileOutput":"android/app/google-services.json"}},"dart":{"lib/firebase_options.dart":{"projectId":"todo-edbed","configurations":{"android":"1:947972033982:android:5c6b842cc02121549d7def","ios":"1:947972033982:ios:e62d2b7d545561ec9d7def"}}}}}}

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "947972033982",
+    "project_id": "todo-edbed",
+    "storage_bucket": "todo-edbed.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:947972033982:android:5c6b842cc02121549d7def",
+        "android_client_info": {
+          "package_name": "com.example.todo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDLYvCLvsjovd7FWhNmYrg7GpfOQ8TFA3A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
