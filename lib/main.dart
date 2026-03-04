@@ -6,6 +6,9 @@ import 'package:provider/provider.dart';
 import 'package:todo/features/home/home_screen.dart';
 import 'package:todo/features/login/login_provider.dart';
 import 'package:todo/features/login/login_screen.dart';
+import 'package:todo/features/home/providers/todo_provider.dart'
+    as todo_provider;
+import 'package:todo/services/notification_service.dart';
 
 import 'firebase_options.dart';
 
@@ -13,6 +16,9 @@ Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+
+  await NotificationService().init();
+  await NotificationService().requestPermissions();
 
   SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitDown,
@@ -28,7 +34,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
-      providers: [ChangeNotifierProvider(create: (context) => LoginProvider())],
+      providers: [
+        ChangeNotifierProvider(create: (context) => LoginProvider()),
+        ChangeNotifierProvider(
+          create: (context) => todo_provider.TodoProvider(),
+        ),
+      ],
       child: GestureDetector(
         onTap: () {
           FocusScope.of(context).unfocus();
